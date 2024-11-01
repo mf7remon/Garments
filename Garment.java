@@ -40,5 +40,13 @@ class Supplier {
         this.name = name;
         this.contactInfo = contactInfo;
     }
+    public void addFabric(Fabric fabric) {
+        suppliedFabrics.add(fabric);
+        System.out.println("Added fabric to supplier: " + name);
+    }
+
+    public List<Fabric> getSuppliedFabrics() {
+        return suppliedFabrics;
+    }
 
 }
