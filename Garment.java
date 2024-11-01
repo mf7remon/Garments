@@ -133,3 +133,42 @@ class Inventory {
         return garments;
     }
 }
+
+public class Garment {
+    public String id;
+    public String name;
+    public String description;
+    public String size;
+    public String color;
+    public double price;
+    public int stockQuantity;
+
+    public Garment(String id, String name, String description, String size, String color, double price, int stockQuantity) {
+        this.id = id;
+        this.name = name;
+        this.description = description;
+        this.size = size;
+        this.color = color;
+        this.price = price;
+        this.stockQuantity = stockQuantity;
+    }
+
+    public void updateStock(int update) {
+        stockQuantity += update;
+        System.out.println("Updated stock for " + name + ": " + stockQuantity);
+    }
+
+    public double calculateDiscountPrice(double discount) {
+        return price - (price * discount / 100);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+
+}
