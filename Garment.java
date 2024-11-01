@@ -102,3 +102,20 @@ class Customerr {
         return orders;
     }
 }
+
+class Inventory {
+    private List<Garment> garments = new ArrayList<>();
+
+    public void addGarment(Garment garment) {
+        garments.add(garment);
+        System.out.println("Added garment to inventory: " + garment.getName());
+    }
+
+    public Garment findGarment(String garmentName) {
+        for (Garment g : garments) {
+            if (g.getName().equals(garmentName)) {
+                return g;
+            }
+        }
+        return null;
+    }
