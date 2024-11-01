@@ -50,3 +50,17 @@ class Supplier {
     }
 
 }
+
+class Orderr {
+    public String orderId;
+    public Date orderDate;
+    public List<Garment> garments = new ArrayList<>();
+    public double totalAmount;
+
+    public Orderr(String orderId, Date orderDate) {
+        this.orderId = orderId;
+        this.orderDate = orderDate;
+    }
+
+
+}
