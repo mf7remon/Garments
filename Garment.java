@@ -170,5 +170,29 @@ public class Garment {
         return price;
     }
 
+    public static void main(String[] args) {
+        Fabric cottonFabric = new Fabric("Fabric_01", "Cotton", "black", 15.0);
+        Garment shirt = new Garment("Garment_01", "Shirt", "Cotton shirt", "XL", "black", 2500.0, 100);
+        cottonFabric.addGarment(shirt);
+
+        Supplier supplier = new Supplier("Supplier_01", "Mehedi", "01610936***");
+        supplier.addFabric(cottonFabric);
+
+        Customerr customer = new Customerr("Customer_01", "Fazlay Rabby", "remonmf3@gmail.com", "01575021***");
+        Orderr order = new Orderr("1702", new Date());
+        order.addGarment(shirt);
+        customer.placeOrder(order);
+
+        Inventory inventory = new Inventory();
+        inventory.addGarment(shirt);
+
+        order.printOrderDetail();
+
+
+        shirt.updateStock(-5);
+        double discountedPrice = shirt.calculateDiscountPrice(10);
+        System.out.println("Discounted price: " + discountedPrice);
+    }
+
 
 }
