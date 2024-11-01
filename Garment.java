@@ -30,3 +30,10 @@ class Fabric {
         return garments;
     }
 }
+
+class Supplier {
+    public String id, name, contactInfo;
+    private List<Fabric> suppliedFabrics = new ArrayList<>();
+
+
+}
