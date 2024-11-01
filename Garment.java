@@ -80,3 +80,25 @@ class Orderr {
     }
 
 }
+
+
+class Customerr {
+    public String customerId, name, email, phone;
+    private List<Orderr> orders = new ArrayList<>();
+
+    public Customerr(String customerId, String name, String email, String phone) {
+        this.customerId = customerId;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+    }
+
+    public void placeOrder(Orderr order) {
+        orders.add(order);
+        System.out.println("Order placed by: " + name);
+    }
+
+    public List<Orderr> viewOrders() {
+        return orders;
+    }
+}
