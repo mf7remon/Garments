@@ -67,5 +67,16 @@ class Orderr {
         System.out.println("Added garment to order: " + orderId);
     }
 
+    public double calculateTotalAmount() {
+        totalAmount = 0;
+        for (Garment g : garments) {
+            totalAmount += g.getPrice();
+        }
+        return totalAmount;
+    }
+
+    public void printOrderDetail() {
+        System.out.println("Order ID: " + orderId + ", Date: " + orderDate + ", Total: " + totalAmount);
+    }
 
 }
