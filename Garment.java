@@ -61,6 +61,11 @@ class Orderr {
         this.orderId = orderId;
         this.orderDate = orderDate;
     }
+    public void addGarment(Garment garment) {
+        garments.add(garment);
+        totalAmount += garment.getPrice();
+        System.out.println("Added garment to order: " + orderId);
+    }
 
 
 }
