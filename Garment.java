@@ -119,3 +119,17 @@ class Inventory {
         }
         return null;
     }
+    public void removeGarment(String garmentName) {
+        for (int i = 0; i < garments.size(); i++) {
+            if (garments.get(i).getName().equals(garmentName)) {
+                garments.remove(i);
+                System.out.println("Removed garment from inventory: " + garmentName);
+                break;
+            }
+        }
+    }
+
+    public List<Garment> getGarments() {
+        return garments;
+    }
+}
